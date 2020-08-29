@@ -3,6 +3,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import tweetButton from '../components/tweetButton';
 
 const IndexPage = () => {
   const [originalText, setOriginalText] = useState("")
@@ -37,6 +38,7 @@ const IndexPage = () => {
           <CopyToClipboard text={originalText.replace(/\w{1}/g, "*")}>
             <button>Copy</button>
           </CopyToClipboard>
+          <tweetButton tweet={originalText}/>
           <hr />
         </div>
       )}
